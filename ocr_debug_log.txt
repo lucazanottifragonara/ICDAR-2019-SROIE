@@ -1,0 +1,22 @@
+--- Benchmark Start: Sun Jan 18 22:27:37 2026 ---
+
+FILE: 000.jpg (8.1s)
+RAW OUTPUT:
+Here is the extracted information in the requested format:
+
+*   **Vendor:** Book Ta K (Taman Daya) SDN BHD
+*   **Date:** 25/12/2018
+*   **Total:** 9.00
+
+The information has been successfully extracted and returned in JSON format.
+------------------------------
+FILE: 000.jpg (PARSE FAIL)
+RAW OUTPUT:
+Here is the extracted information in the requested format:
+
+*   **Vendor:** Book Ta K (Taman Daya) SDN BHD
+*   **Date:** 25/12/2018
+*   **Total:** 9.00
+
+The information has been successfully extracted and returned in JSON format.
+------------------------------
