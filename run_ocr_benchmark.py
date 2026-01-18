@@ -60,6 +60,27 @@ def run_debug_benchmark(limit=2):
             else:
                 log.write(f"Ground truth not found for {base} (expected {gt_path_json})\n")
 
+            # Print & log both AI JSON and ground-truth JSON for debugging
+            try:
+                ai_json_str = json.dumps(data, indent=2, ensure_ascii=False)
+            except Exception:
+                ai_json_str = str(data)
+            if gt is not None:
+                try:
+                    gt_json_str = json.dumps(gt, indent=2, ensure_ascii=False)
+                except Exception:
+                    gt_json_str = str(gt)
+            else:
+                gt_json_str = 'MISSING'
+
+            print("AI JSON:")
+            print(ai_json_str)
+            print("GT JSON:")
+            print(gt_json_str)
+
+            log.write("AI JSON:\n" + ai_json_str + "\n")
+            log.write("GT JSON:\n" + gt_json_str + "\n")
+
             # Normalize monetary amounts to Decimal
             def normalize_amount(s):
                 if s is None:
